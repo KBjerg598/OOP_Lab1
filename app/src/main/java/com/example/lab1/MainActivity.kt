@@ -15,6 +15,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    fun calculateCircleArea(view: View) {
+        val editText = findViewById<EditText>(R.id.edit_text_number_circle)
+        val text = editText.text.toString()
+        val radius = text.toDouble()
+        val pi = 3.14159
+        var area = round(pi * radius * radius)/10.0
+        var areaCircle:String = area.toString()
+        textAreaCircle?.setText(areaCircle)
+        textAreaCircle = findViewById(R.id.textAreaCircle)
+    }
     fun calculateRectangleArea(view: View) {
         val editText = findViewById<EditText>(R.id.edit_text_number_rectangle)
         val text = editText.text.toString()
